@@ -22,6 +22,21 @@ This is my first project related with the Spring Boot ecosystem, I want to achie
 - Run the command `docker build -t alzirr .` in the root of the project
 - Run the command `docker run -p 8080:8080 alzirr`
 
+### Endpoints
+
+- Swagger UI: http://localhost:8080/swagger-ui.html
+- Hello World: http://localhost:8080/ - GET
+    ```bash
+    curl --location --request GET 'http://localhost:8080/'
+    ```
+- Hello World with Your Name: http://localhost:8080 - POST - Body: { "name": "Your Name" }
+    ```bash
+    curl --location --request POST 'http://localhost:8080/' \ 
+    --header 'Content-Type: application/json' \
+    --data-raw '{
+        "name": "Your Name"
+    }'
+    ```
 
 ## Official Documentation
 
